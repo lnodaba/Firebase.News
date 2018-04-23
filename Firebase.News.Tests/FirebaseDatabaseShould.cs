@@ -12,12 +12,13 @@ namespace Firebase.News.Tests
     [TestClass]
     public class FirebaseDatabaseShould
     {
+        private readonly string firebaseAccountURL = "https://sapi-news.firebaseio.com/";
 
         [TestMethod]
         public async Task SaveTRexToTheCloud()
         {
             //Arrange
-            var firebase = new FirebaseClient("https://sapi-news.firebaseio.com/");
+            var firebase = new FirebaseClient(firebaseAccountURL);
             string testContext = "dinosaurs-save-tests";
             await firebase.Child(testContext).DeleteAsync();
 
@@ -29,10 +30,10 @@ namespace Firebase.News.Tests
         }
 
         [TestMethod]
-        public async Task ContainsAtLeastOneTRex()
+        public async Task ContainAtLeastOneTRex()
         {
             //Arrange
-            var firebase = new FirebaseClient("https://sapi-news.firebaseio.com/");
+            var firebase = new FirebaseClient(firebaseAccountURL);
             string testContext = "dinosaurs-query-tests";
             await firebase.Child(testContext).DeleteAsync();
 
@@ -55,7 +56,7 @@ namespace Firebase.News.Tests
         public async Task DeleteTRexFromTheCloud()
         {
             //Arrange
-            var firebase = new FirebaseClient("https://sapi-news.firebaseio.com/");
+            var firebase = new FirebaseClient(firebaseAccountURL);
             string testContext = "dinosaurs-delete-tests";
             await firebase.Child(testContext).DeleteAsync();
 
@@ -66,17 +67,17 @@ namespace Firebase.News.Tests
                 .Child(testContext)
                 .DeleteAsync();
 
-            //Assert
             var dinos = await firebase
-              .Child(testContext)
-              .OrderByKey()
-              .OnceAsync<Dinosaur>();
+             .Child(testContext)
+             .OrderByKey()
+             .OnceAsync<Dinosaur>();
 
+            //Assert
             Assert.AreEqual(dinos.Count,0);
         }
 
         [TestMethod]
-        public void UpdateIfNewItemArrives()
+        public void SyncronizeIfNewDinoArrives()
         {
             //https://github.com/step-up-labs/firebase-database-dotnet#realtime-streaming
             Assert.Fail("Not implemented yet.");
