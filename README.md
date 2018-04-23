@@ -3,7 +3,7 @@
 It's a simple template project for the Firebase Labs it contains (hopefully) all the necessary samples,
 based on them you will be able to create your very own project.
   
-# Contains:
+## Contains:
  
   - A newly created **.NET MVC** ( **API** template is also included) project, this project will be the **frontend of the application**
   - The template project which is having an example for all the **CRUD** (Create/Read/Update/Delete) operations 
@@ -15,12 +15,12 @@ based on them you will be able to create your very own project.
   More info in the Third party libraries section of this document
   
  
- # Third party libraries:
+ ## Third party libraries:
  
  - [FirebaseDatabase.net](https://github.com/step-up-labs/firebase-database-dotnet) 
  - [FirebaseStorage.net](https://github.com/step-up-labs/firebase-storage-dotnet)
  - [FirebaseAuthentication.net](https://github.com/step-up-labs/firebase-authentication-dotnet)
  
-# Pre requirement.
+## Pre requirement.
  
-# How to create a project similar to this.
+## How to create a project similar to this.
