@@ -39,7 +39,7 @@ based on them you will be able to create your very own project.
  [info for the controllers](https://www.tutlane.com/tutorial/aspnet-mvc/how-to-create-add-controller-in-asp-net-mvc-application-project) and
  [info for the views](https://msdn.microsoft.com/en-us/library/dd405231(v=vs.98).aspx)
 
-## Quick catch up with C# under [[this]](https://learnxinyminutes.com/docs/csharp/) and [[this]](https://www.tutorialspoint.com/csharp/index.htm)
+## Quick catch up with C# under [[this]](https://learnxinyminutes.com/docs/csharp/) and [[this]](https://www.tutorialspoint.com/csharp/index.htm) the first one is a cheat sheet ;-)
 
 
 
