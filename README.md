@@ -21,6 +21,11 @@ based on them you will be able to create your very own project.
  - [FirebaseStorage.net](https://github.com/step-up-labs/firebase-storage-dotnet)
  - [FirebaseAuthentication.net](https://github.com/step-up-labs/firebase-authentication-dotnet)
  
-## Pre requirement.
+## Pre requirements (Firebase setup):
+
+1. Create a firebase project with your google account through the [Console](https://console.firebase.google.com) 
+2. In the online platform, under development section you can create a new database NOTE: check no strickt mode.
+3. On the same panel you can start to have storage ready as well. 
+4. Navigate to the Rules tab of the Storage and remove the if statemenf from the JSON from the line which is starting with `allow read, write`
  
 ## How to create a project similar to this.
