@@ -10,7 +10,7 @@ based on them you will be able to create your very own project.
   this includes the methods for the **controllers** and also the **views** for them. 
   You can find the dinosaur controller inside the controller folder and the associated views for them inside the Views/Dinosaur folder.
   
-  - **Firebase.News.Tests** the Unit tests for the **public API** of the third party libraries we're going to use during the labs. 
+  - **Firebase.News.Tests** the integrations tests for the **public APIs** of the third party libraries we're going to use during the labs. 
   Namely : **FirebaseDatabase.net, FirebaseStorage.net and FirebaseAuthentication.net**
   More info in the Third party libraries section of this document
   
