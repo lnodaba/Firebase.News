@@ -30,7 +30,7 @@ based on them you will be able to create your very own project.
  
 # How to create a project similar to this:
 
-##Lab 1:
+## Lab 1:
 
 1. Create a new .NET Web application project and check MVC and Web API. More info on the following [link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started).
 2. Create a class library which will envelope your domain knowledge. [Info](https://msdn.microsoft.com/en-us/library/cc668164.aspx)
@@ -40,7 +40,7 @@ based on them you will be able to create your very own project.
  [info for the controllers](https://www.tutlane.com/tutorial/aspnet-mvc/how-to-create-add-controller-in-asp-net-mvc-application-project) and
  [info for the views](https://msdn.microsoft.com/en-us/library/dd405231(v=vs.98).aspx)
 
-##Lab 2:
+## Lab 2:
 
 1. Install the third party libraries through NuGet, for both projects, if you willing to have unit tests install the libraries for that project as well. [Info](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio)
 2. Make sure that every project is having the same version of the NewtonSoft, for example Update all the pachages through the Nuget Package manager console. [[Link]](ould not load file or assembly 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.)
