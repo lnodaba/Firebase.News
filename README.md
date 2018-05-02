@@ -43,7 +43,7 @@ based on them you will be able to create your very own project.
 ### Lab 2:
 
 1. Install the third party libraries through NuGet, for both projects, if you willing to have unit tests install the libraries for that project as well. [Info](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio)
-2. Make sure that every project is having the same version of the NewtonSoft, for example Update all the pachages through the Nuget Package manager console. [[Link]](ould not load file or assembly 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.)
+2. Make sure that every project is having the same version of the NewtonSoft, for example Update all the pachages through the Nuget Package manager console. [[Link]]()
 2. Change the NewsItem Class to have the conversion from long to DateTime back and forth
 3. Set up datepicker with JQuery UI. [[link]](https://jqueryui.com/datepicker/)
 4. Add file input to the create view and also extend the controller with the files to have them as parameters (max 3).
