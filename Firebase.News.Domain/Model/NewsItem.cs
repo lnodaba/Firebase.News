@@ -11,6 +11,7 @@ namespace Firebase.News.Domain.Model
     {
         public NewsItem()
         {
+            ImagePaths = new List<string>();
         }
 
         public NewsItem(string id, DateTime date, string description, string title, List<string> imagePaths, string creatorId)
@@ -30,19 +31,35 @@ namespace Firebase.News.Domain.Model
 
         public long DateStamp
         {
-            get => _date.Ticks;
+            get
+            {
+                return _date.Ticks;
+            } 
+            set
+            {
+                _date = new DateTime(value);
+            } 
         }
 
         [JsonIgnore]
         public DateTime Date
         {
-            get => _date;
-            set =>_date = value;
+            get
+            {
+                return _date;
+            } 
+            set
+            {
+                _date = value;
+            } 
         }
 
         public string Description { get; set; }
         public string Title { get; set; }
         public List<string> ImagePaths { get; set; }
         public string CreatorId { get; set; }
+        [JsonIgnore]
+        public Creator Creator { get; set; }
+
     }
 }

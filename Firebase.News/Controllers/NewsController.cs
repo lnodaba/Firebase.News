@@ -53,13 +53,13 @@ namespace Firebase.News.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(NewsItem item, IEnumerable<HttpPostedFileBase> files)
         {
-            // TODO: Add insert logic here
-            var file = files.FirstOrDefault();
-            var downloadUrl = await new FirebaseRepository().Upload(file.InputStream, file.FileName);
-            if (!string.IsNullOrWhiteSpace(downloadUrl))
+            var repo = new FirebaseRepository();
+            foreach (var file in files.Where(x => x != null))
             {
-                return RedirectToAction("Index");
+                var imagePath = await repo.UploadImage(file.InputStream, file.FileName);
+                item.ImagePaths.Add(imagePath);
             }
+            var result = await repo.SaveNewsItem(item);
             return RedirectToAction("Index");
         }
 

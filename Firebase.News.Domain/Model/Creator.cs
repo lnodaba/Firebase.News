@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,13 @@ namespace Firebase.News.Domain.Model
 {
     public class Creator
     {
+        [JsonIgnore]
+        public readonly static Creator Me = new Creator()
+        {
+            Name = "Lorand Noda",
+            ContactInfo = "LynxSolutions S.R.L - .NET Department"
+        };
+
         public Creator()
         {
         }

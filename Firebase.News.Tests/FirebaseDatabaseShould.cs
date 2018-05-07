@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using Firebase.News.Models;
+using Firebase.News.Domain;
+using Firebase.News.Domain.Model;
 
 namespace Firebase.News.Tests
 {
@@ -74,6 +76,19 @@ namespace Firebase.News.Tests
 
             //Assert
             Assert.AreEqual(dinos.Count,0);
+        }
+
+        [TestMethod]
+        public async Task Lab3()
+        {
+            //Arrange
+            var repo = new FirebaseRepository();
+
+            //Act
+            var result = repo.GetCreatorBy(Creator.Me.Name).Result;
+
+            //Assert
+            Assert.IsNotNull(result);
         }
 
         [TestMethod]
