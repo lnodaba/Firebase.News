@@ -52,8 +52,6 @@ based on them you will be able to create your very own project.
 
 ### Lab 3:
 
-## Quick catch up with C# under [[this]](https://learnxinyminutes.com/docs/csharp/) and [[this]](https://www.tutorialspoint.com/csharp/index.htm) the first one is a cheat sheet ;-)
-
 1. Change the NesItem class to have an actual refference to the Creator
 2. Create a static readonly Creator property in the Creator class itself
 3. Extend the repository with query which gets the creator by name
@@ -67,6 +65,9 @@ based on them you will be able to create your very own project.
 2. Write a listing for the news by changing the dummy mocked object to an actual repository function invoke
 3. Create an update news function in the repository and test it through firebase console
 4. Apply authentication to the system.
+
+## Quick catch up with C# under [[this]](https://learnxinyminutes.com/docs/csharp/) and [[this]](https://www.tutorialspoint.com/csharp/index.htm) the first one is a cheat sheet ;-)
+
 
 
 
