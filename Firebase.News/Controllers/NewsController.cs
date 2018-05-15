@@ -11,38 +11,21 @@ namespace Firebase.News.Controllers
 {
     public class NewsController : AsyncController
     {
-        public NewsItem AnItem = new NewsItem()
+        private FirebaseRepository _repo;
+
+        public NewsController()
         {
-            Id = Guid.NewGuid().ToString(),
-            Title = "Test",
-            Date = DateTime.Now,
-            Description = "No description",
-            CreatorId = "PistikeID",
-            ImagePaths = new List<string>()
-            {
-                "Path1",
-                "Path2"
-            }
-        };
+            _repo = new FirebaseRepository();
+        }
 
         // GET: News
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View(new List<NewsItem>()
-            {
-                AnItem,
-                AnItem,
-                AnItem,
-                AnItem
-            });
+            var result = await _repo.GetNews();
+            return View(result);
         }
 
-        // GET: News/Details/5
-        public ActionResult Details(string id)
-        {
-            return View();
-        }
-
+      
         // GET: News/Create
         public ActionResult Create()
         {
@@ -53,20 +36,26 @@ namespace Firebase.News.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(NewsItem item, IEnumerable<HttpPostedFileBase> files)
         {
-            var repo = new FirebaseRepository();
             foreach (var file in files.Where(x => x != null))
             {
-                var imagePath = await repo.UploadImage(file.InputStream, file.FileName);
+                var imagePath = await _repo.UploadImage(file.InputStream, file.FileName);
                 item.ImagePaths.Add(imagePath);
             }
-            var result = await repo.SaveNewsItem(item);
+            var result = await _repo.SaveNewsItem(item);
             return RedirectToAction("Index");
         }
 
+        // GET: News/Details/5
+        public async Task<ActionResult> Details(string id) => await GetCreatorBy(id);
+
         // GET: News/Edit/5
-        public ActionResult Edit(string id)
+        public async Task<ActionResult> Edit(string id) => await GetCreatorBy(id);
+
+        private async Task<ActionResult> GetCreatorBy(string id)
         {
-            return View();
+            var resultCollection = await _repo.GetNews();
+            var result = resultCollection.Where(x => x.Id == id).FirstOrDefault();
+            return View(result);
         }
 
         // POST: News/Edit/5

@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FirebaseRepository.cs" />
-    <Compile Include="FirebaseRepository2.cs" />
+    <Compile Include="ModelExtensions.cs" />
     <Compile Include="Model\Creator.cs" />
     <Compile Include="Model\NewsItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

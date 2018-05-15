@@ -79,7 +79,7 @@ namespace Firebase.News.Tests
         }
 
         [TestMethod]
-        public async Task Lab3()
+        public async Task CreateNewCreatorIfDoesntExistAndReturnsItBack()
         {
             //Arrange
             var repo = new FirebaseRepository();
