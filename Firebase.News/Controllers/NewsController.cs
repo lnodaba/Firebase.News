@@ -46,11 +46,15 @@ namespace Firebase.News.Controllers
         }
 
         // GET: News/Details/5
-        public async Task<ActionResult> Details(string id) => await GetCreatorBy(id);
+        public async Task<ActionResult> Details(string id)
+        {
+            return await GetCreatorBy(id);
+        }
 
         // GET: News/Edit/5
         public async Task<ActionResult> Edit(string id) => await GetCreatorBy(id);
 
+        [NonAction]
         private async Task<ActionResult> GetCreatorBy(string id)
         {
             var resultCollection = await _repo.GetNews();

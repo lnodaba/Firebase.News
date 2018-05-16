@@ -60,6 +60,5 @@ namespace Firebase.News.Domain.Model
         public string CreatorId { get; set; }
         [JsonIgnore]
         public Creator Creator { get; set; }
-
     }
 }

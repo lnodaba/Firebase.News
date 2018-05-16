@@ -18,7 +18,6 @@ namespace Firebase.News.Domain.Model
 
         public Creator()
         {
-            
         }
 
         public Creator(string id, string name, string contactInfo)
